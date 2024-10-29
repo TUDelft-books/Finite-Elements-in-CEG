@@ -181,7 +181,7 @@ $$\hat\bK = \bK + \frac{1}{\beta\Delta t^2}\bM + \frac{\gamma}{\beta\Delta t}\bC
 
 $$
 \hat\bff_{n+1} = \bff_{n+1} + \bM\left(\frac{1}{\beta\Delta t^2}\ba_n + \frac{1}{\beta\Delta t}\dot\ba_n + \left(\frac{1}{2\beta}-1\right) \ddot\ba_n\right) \\ 
-+ \bC\left(\frac{\gamma}{\beta\Delta t}\ba_n + \left(1-\frac{\gamma}{\beta}\right)\dot\ba_n + \left(\frac{\gamma}{2\beta}-1\right)\Delta t\ddot\ba_n\right)
++ \bC\left(\frac{\gamma}{\beta\Delta t}\ba_n + \left(\frac{\gamma}{\beta}-1\right)\dot\ba_n + \left(\frac{\gamma}{2\beta}-1\right)\Delta t\ddot\ba_n\right)
 $$
 ```
 :::
