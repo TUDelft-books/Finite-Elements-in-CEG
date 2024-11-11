@@ -24,7 +24,7 @@ $$ \mathbf{K}_e = \frac{v}{x_2-x_1}\left[\begin{matrix}1 & -1 \\ -1 & 1\end{matr
 In practice, however, numerical integration is performed. The idea behind numerical integration is that an integral can be replaced by a weighted sum, as follows:
 
 
-$$ \mathbf{K}_e = \int_{Ω^ε}\ f(x,y)dΩ   \approx  \sum_{i=1}^{n_ip} w_i f(x_i,y_i) $$
+$$ \mathbf{K}_e = \int_{Ω^ε}\ f(x,y)dΩ   \approx  \sum_{i=1}^{n_{ip}} w_i f(x_i,y_i) $$
 
 The function $f$ can be evaluated at a selected number of points, with coordinates $(x_i, y_i)$ and multiplied by weights $w_i$. 
 The next step involves considering how to perform efficient and accurate numerical integration.  One first requirement that arises is that the sum of all weights within an element should be equal to the integration domain, in this case the length of the element.  Secondly, the number and location of the integration points must be specified, as well as the individual weights. 
