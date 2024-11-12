@@ -69,7 +69,7 @@ $$(isoparametric-def-1d)
 :::{card} Exercise
 What mapping do you obtain with the reference shape functions given above for an element with nodal coordinates $x_1=2$, $x_2=4$ and $x_3=6$? 
 
-```{figure} ../images/isoparametric_1d_example.png
+```{figure} figures/isoparametric_1d_example.png
 ---
 height: 300px
 name: isoparametric-1d-example
@@ -140,7 +140,7 @@ $$
 Isoparametric has been illustrated above for the case of 1D. It deserves to be said, however, that if there were only finite elements in 1D, the concept of isoparametric mapping would likely not be widespread. The approach really shines in higher dimensions, particularly on unstructured meshes. As an example, take the arbitrarily oriented quadrilateral element shown below. 
 
 
-```{figure} ../images/isoparametric_quad.png
+```{figure} figures/isoparametric_quad.png
 ---
 height: 320px
 name: isoparametric-quad
@@ -190,7 +190,7 @@ Consider a distorted quadrilateral element with nodal coordinates
 
 $$\mathbf{x}_1 = (0,0), \quad\mathbf{x}_2=(4,0), \quad\mathbf{x}_3 = (6,2), \quad\mathbf{x}_4 = (0,5)$$ 
 
-```{figure} ../images/isoparametric_2d_example.png
+```{figure} figures/isoparametric_2d_example.png
 ---
 height: 200px
 name: isoparametric-2d-example
