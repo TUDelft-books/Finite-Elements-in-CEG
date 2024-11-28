@@ -191,6 +191,14 @@ parts:
       sections:
       - file: exam_tips/1110
       - file: exam_tips/5110
+      
+    - file: scientific_visualisation/intro
+      sections:
+      - file: scientific_visualisation/open_database
+      - file: scientific_visualisation/paraview/intro
+        sections: 
+        - file: scientific_visualisation/paraview/paraview
+        - file: scientific_visualisation/paraview/improving_visualisation
 
 
 # - file: advanced_topics/intro
