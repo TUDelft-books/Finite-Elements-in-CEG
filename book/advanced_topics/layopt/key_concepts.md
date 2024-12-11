@@ -4,7 +4,7 @@ In this chapter we implement a pyhton script that provides a numerical layout op
 
 An easy to use online 2D version is Layopt (link), which is a bit of a black box for the user. Here we adapt a script provided by (paper source here) and explain how the optimization process works.
 
-### Using the optimization script
+## Using the optimization script
 To use the optimization script we need to follow a couple of steps:
 
 **Step 1:** Define the design domain and the load and support conditions, figure(1a). 
@@ -17,6 +17,7 @@ To use the optimization script we need to follow a couple of steps:
 
 
 ![Problem Description](figures/fig1_problemdescription.png)
+
 
 
 
@@ -67,7 +68,7 @@ The equilibrium matrix $\bold{B}$ is assembled using $\bold{B}_{i}$ matrices for
 $B_{i}=[\frac{-X_{i}}{l{i}}, \frac{-Y_{i}}{l{i}}, \frac{X_{i}}{l{i}}, \frac{Y_{i}}{l{i}}]$, where $X_{i}=x_{i}^{II}-x_{i}^{I}$ and $Y_{i}=y_{i}^{II}-y_{i}^{I}$ the projected length $l_{i}$ in the $x$ and $y$ axis directions respectively. 
 
 
-### Problem extensions
+## Problem extensions
 
 The script can be extended with joint cost, an adaptive member adding scheme and multiple load cases.
 
@@ -82,5 +83,10 @@ The adaptive member adding scheme is used to reduce the computation time. It is 
 
 **Multiple load cases**
 
+The problem can be extended to include multiple load cases. The equilibrium constraint becomes:
 
+
+$$
+\bold{B} \bold{q}^k = \bold{f}^k, \text{ for } k=1, 2, ..., p
+$$
 

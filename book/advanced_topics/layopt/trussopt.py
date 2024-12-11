@@ -147,12 +147,11 @@ def lo_plot(Nd, Cn, a, q, supports, loads, threshold, str, update=True, plane='x
             ax.arrow(Nd[node_idx, u], Nd[node_idx, v], load_vector[u], load_vector[v], head_width=0.05, head_length=0.1, fc='k', ec='k')
     # Plot supports as triangles
     for node_idx, support in supports.items():
-        if support[0] == 0:
+        if support[0] == 0 and support[1] == 0:
             ax.plot(Nd[node_idx, 0], Nd[node_idx, 1], 'g^')
-        if support[1] == 0:
-            ax.plot(Nd[node_idx, 0], Nd[node_idx, 1], 'g>')
-        if support[2] == 0:
-            ax.plot(Nd[node_idx, 0], Nd[node_idx, 1], 'g<')
+        if support[0] == 1 and support[1] == 0:
+            ax.plot(Nd[node_idx, 0], Nd[node_idx, 1], 'g^')
+            ax.plot([Nd[node_idx, 0], Nd[node_idx, 0]], [Nd[node_idx, 1], Nd[node_idx, 1] - 0.1], 'g_')
     plt.pause(0.01) if update else plt.show()
 
 def lo_plot_3d(Nd, Cn, a, q, threshold, str, update=True, elev=30, azim=30):
