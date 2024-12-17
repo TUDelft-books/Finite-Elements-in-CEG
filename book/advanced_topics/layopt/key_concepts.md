@@ -1,7 +1,7 @@
-## Key concepts
+# Key concepts
 
 In this chapter we implement a pyhton script that provides a numerical layout optimization.  
-An easy to use online version is [LayOpt](https://www.layopt.com/docs), which is a bit of a black box for the user. Here we adapt a script provided in the following [paper](https://link.springer.com/article/10.1007/s00158-019-02226-6) $^1$ and explain how the optimization process works. It incorparates an efficient adaptive member adding scheme for 2D and 3D problems subject to multiple load cases.
+An easy to use online version is [LayOpt](https://www.layopt.com/truss), which is a bit of a black box for the user. Here we adapt a script provided in the following [paper](https://link.springer.com/article/10.1007/s00158-019-02226-6) $^1$ and explain how the optimization process works. It incorparates an efficient adaptive member adding scheme for 2D and 3D problems subject to multiple load cases.
 
 ## Using the optimization script
 To use the optimization script we need to follow a couple of steps:
@@ -14,16 +14,11 @@ To use the optimization script we need to follow a couple of steps:
 
 **Step 4**: Solve the optimization problem, figure(1d)
 
-
 ![Problem Description](figures/fig1_problemdescription.png)
 
+**Figure 1:** problem description (L. He, M. Gilbert, X. Song, 2019) 
 
-**Figure 1:** problem description (L. He, M. Gilbert, X. Song, 2019)
-
-
-
-
-**Formulation of the optimization problem**
+## Formulation of the optimization problem
 
 Steps 1-3 will be explained in the examples. Step 4: The optimization itself, is already fully coded in the script and here we explain some key concepts of what it is doing. If you are interested you can dive deeper into the code itself with the help of this paper
 
