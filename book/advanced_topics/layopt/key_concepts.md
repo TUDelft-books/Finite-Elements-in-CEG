@@ -100,7 +100,7 @@ $$
 The main function in ``trussopt.py`` already requires you to enter the geometry in 3D. Only for the plotting an extra package is needed.
 
 
-References
+## References
 
 
-    (1) L. He, M. Gilbert, X. Song, "A Python script for adaptive layout optimization of trusses", Struct. Multidisc. Optim., 2019.
+(1) L. He, M. Gilbert, X. Song, "A Python script for adaptive layout optimization of trusses", Struct. Multidisc. Optim., 2019.
