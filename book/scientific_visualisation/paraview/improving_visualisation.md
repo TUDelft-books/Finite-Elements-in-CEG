@@ -83,12 +83,14 @@ The [Source filter](https://docs.paraview.org/en/latest/UsersGuide/introduction.
  
 The [Text filter](https://docs.paraview.org/en/latest/ReferenceManual/annotations.html#text-source) in Paraview is used to add annotations or labels to your visualisation. This is particularly useful for adding titles, axis labels, or explanatory text to highlight important parts of your visualisation. Text annotations can help viewers understand the context, significance, or interpretation of the visualised data. To add text to the visualisation, go to the **Filters** menu and choose `Filters > Alphabetical > Text`. In the Properties Panel, type the text you wish to display in the **Text** field. You can enter simple text or even combine it with expressions (e.g., data values). Adjust the position of the text in 3D space by changing the **Position** settings. Modify the font, size, and color as needed for visibility and aesthetic preferences.
 
-<figure id="fig-indenter-image" style="text-align: center; margin: auto;">
-  <img src="https://docs.paraview.org/en/latest/_images/TextSource.png" alt="Text Source Image" width="300">
-  <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    <strong>Figure 4:</strong> Example where text is added to the visualisation. Sourced from the <a href="https://docs.paraview.org" target="_blank" rel="noopener noreferrer">ParaView documentation</a>.
-  </figcaption>
-</figure>
+```{figure} ./Figures/text.jpg
+---
+width: 300px
+name: Text
+---
+Text filter used to create a title in the visualisation
+````
+
 
 ### 2 Post-processing
 
@@ -127,3 +129,10 @@ The [Plot Selection Over Time](https://docs.paraview.org/en/latest/UsersGuide/se
 #### 3.2 Plot Over Line
  
 The [Plot Over Line](https://docs.paraview.org/en/latest/Tutorials/ClassroomTutorials/targetedParaViewAndCTH.html#plot-over-line) filter allows you to extract data along a specific line or path within your dataset. This is helpful for analyzing variations of a particular quantity (e.g., temperature, pressure, velocity) along a defined line, such as a cross-sectional profile or measurement line in your dataset. Apply the **Plot Over Line** filter from the **Filters** menu (`Filters > Data Analysis > Plot Over Line`). In the Properties Panel, define the start and end points of the line along which you want to extract data. You can input coordinates directly or use the graphical tools to click and place the line in the 3D view. You can specify the quantity you want to analyze along the line, such as a scalar or vector field.
+
+```{figure} ./Figures/SEG2018_meso-micro_2D.gif
+---
+width: 600px
+name: Data analysis
+---
+Data analysis: plot selection over time and plot selection over line in one visualisation.

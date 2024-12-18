@@ -104,13 +104,14 @@ Glyph visualization example.
  
 The [Stream Tracer filter](https://docs.paraview.org/en/latest/Tutorials/ClassroomTutorials/beginningSourcesAndFilters.html#stream-tracer) is used to generate streamlines (or stream tubes) from a vector field. Streamlines represent the flow paths that particles would follow in a vector field (such as fluid flow). This tool is commonly used in fluid dynamics to visualise the flow of fluids or gases. Apply the **Stream Tracer** filter from the filter menu (`Filters > Alphabetical > Stream Tracer`). In the Properties Panel, specify the **Seed Points** (initial points from which the streamlines will begin) and adjust the **Integration Method** and **Step Size** to control the trace accuracy.
 
-```{figure} ./Figures/stream_tracer.png
----
-width: 300px
-name: stream tracer
----
-An example of the stream tracer filter used. As you can see, streamlines are created to show how the fluid moves.
-```
+<figure id="fig-indenter-image" style="text-align: center; margin: auto;">
+  <img src="https://data.4tu.nl/thumbnails/e4fb265b-f05b-4a8e-b2c0-afde16240d45.png" 
+       alt="Streamtracer" 
+       style="width: 300px;">
+  <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
+    <strong>Figure 1:</strong> Example of the streamtracer filter.
+  </figcaption>
+</figure>
 
 #### 3.4 Warp by Vector
  

@@ -197,9 +197,10 @@ parts:
       sections:
       - file: scientific_visualisation/open_database
       - file: scientific_visualisation/paraview/intro
-        sections: 
+        sections:
         - file: scientific_visualisation/paraview/paraview
         - file: scientific_visualisation/paraview/improving_visualisation
+      - file: scientific_visualisation/paraview/exercise_von_mises
 
 
 # - file: advanced_topics/intro
