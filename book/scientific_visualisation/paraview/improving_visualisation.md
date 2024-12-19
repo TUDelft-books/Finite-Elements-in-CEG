@@ -12,12 +12,13 @@ The [Clip filter](https://docs.paraview.org/en/latest/Tutorials/ClassroomTutoria
 
 Texture mapping and ray tracing are techniques used to enhance the realism of your visualisations. **Texture mapping** applies a 2D image or pattern onto a 3D surface to simulate the appearance of materials, while **ray tracing** simulates the interaction of light with surfaces to create realistic lighting effects like reflections, shadows, and refractions. To apply textures, select your dataset and navigate to the Properties Panel. Under the **Display** section, find the **Texture** option and load a texture image (e.g., a material pattern). Enable **Ray Tracing** by going to the **Render View** settings and adjusting the rendering options. You may need to enable advanced rendering techniques. Adjust parameters like **Reflection**, **Refraction**, and **Shadows** in the Properties Panel to fine-tune the realism of your scene.
 
-<figure id="fig-indenter-video" style="text-align: center; margin: auto;">
-  <img src="https://data.4tu.nl/thumbnails/bc7cf2ab-17cf-46ee-a2ca-0812ec6f605b.gif" alt="Flow through a rock microstructure with ray-tracing" style="width: 300px;">
-  <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    <strong>Figure 1:</strong> Flow through a rock microstructure with ray-tracing. This is a good example how clip, texture and ray tracing can be used in Paraview. Sourced from the <a href="https://data.4tu.nl/search?search=scientific_visualisation" target="_blank" rel="noopener noreferrer">4TU scientific visualisation database</a>.
-  </figcaption>
-</figure>
+```{figure} https://data.4tu.nl/thumbnails/bc7cf2ab-17cf-46ee-a2ca-0812ec6f605b.gif
+---
+width: 300px
+name: fig-indenter-video
+---
+Flow through a rock microstructure with ray-tracing. This is a good example of how clip, texture, and ray tracing can be used in Paraview. Sourced from the 4TU scientific visualisation database.
+````
 
 
 #### 1.3 Transparency
@@ -30,7 +31,7 @@ Transparency is used to make parts of your data see-through, allowing you to vie
     Your browser does not support the video tag.
   </video>
   <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    <strong>Figure 2:</strong> Flow streamlines computed with the Navier-Stokes module, through a digital rock.
+    Flow streamlines computed with the Navier-Stokes module, through a digital rock. Use the slider to see the transparancy!
   </figcaption>
 
   <!-- Custom Slider for controlling video -->
@@ -72,12 +73,13 @@ Transparency is used to make parts of your data see-through, allowing you to vie
  
 The [Source filter](https://docs.paraview.org/en/latest/UsersGuide/introduction.html#id4) in Paraview is used to generate basic geometric shapes, objects, or even predefined data sources that can be used as the foundation for visualisations. These objects can be used as placeholders, input data, or starting points for more complex operations like filtering, visualisation, or simulation. In the **Sources** menu, you can select a shape to generate (e.g., `Sources > Sphere` or `Sources > Cone`). The selected shape will appear in the Pipeline Browser. You can adjust its properties such as size, position, and resolution in the Properties Panel. Modify attributes such as radius, resolution, and center point (position) for the shape to fit your visualisation requirements. Once you've configured the source object, you can apply additional filters or transformations to it as needed for your visualisation.
 
-<figure id="fig-indenter-video" style="text-align: center; margin: auto;">
-  <img src="https://data.4tu.nl/thumbnails/228662c1-a6d8-4736-9eb2-aa6d0289775a.gif" alt="Hydroelastic response of floating solar farm subject to regular waves" style="width: 300px;">
-  <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    <strong>Figure 3:</strong> Hydroelastic response of floating solar farm subject to regular waves. Just as we can use the source filter, the wind turbines can also be modelled in Paraview. This example shows at the same time how an animation can be used to show the visualisation you made. Sourced from the <a href="https://data.4tu.nl/search?search=scientific_visualisation" target="_blank" rel="noopener noreferrer">4TU scientific visualisation database</a>.
-  </figcaption>
-</figure>
+```{figure} https://data.4tu.nl/thumbnails/228662c1-a6d8-4736-9eb2-aa6d0289775a.gif
+---
+width: 300px
+name: fig-floating-solar
+---
+Hydroelastic response of floating solar farm subject to regular waves. This example illustrates how animations can showcase visualizations effectively. Sourced from the [4TU scientific visualisation database](https://data.4tu.nl/search?search=scientific_visualisation).
+````
 
 #### 1.6 Text
  

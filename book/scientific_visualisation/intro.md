@@ -5,9 +5,9 @@ Scientific visualisation is the graphical representation of data, phenomena, or 
 <figure id="fig-indenter-video" style="text-align: center; margin: auto;">
   <img id="dynamic-image" alt="Dynamic scientific visualization" style="width: 300px;">
   <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    <strong>Figure 1:</strong> Example of scientific visualization from the 
+    Example of scientific visualization from the 
     <a href="https://data.4tu.nl/search?search=scientific_visualisation" target="_blank" rel="noopener noreferrer">
-      4TU scientific visualization database
+      4TU scientific visualization database.
     </a>.
   </figcaption>
 </figure>
