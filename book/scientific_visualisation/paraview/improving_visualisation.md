@@ -31,13 +31,13 @@ Transparency is used to make parts of your data see-through, allowing you to vie
     Your browser does not support the video tag.
   </video>
   <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    Flow streamlines computed with the Navier-Stokes module, through a digital rock. Use the slider to see the transparancy!
+    Flow streamlines computed with the Navier-Stokes module, through a digital rock.
   </figcaption>
 
   <!-- Custom Slider for controlling video -->
   <input type="range" id="videoSlider" min="0" max="100" value="0" style="width: 100%;" />
   <br>
-  <span>Use the slider to control the visualisation.</span>
+  <span>Use the slider to rotate the visualisation and see the transparency.</span>
 
   <script>
     const video = document.getElementById('videoPlayer');

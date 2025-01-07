@@ -19,7 +19,7 @@ To help you get familiar with ParaView without the need to download the full app
 
 Follow the steps below to interact with the dataset:
 
-1. **Download the dataset** a dataset from the 4TU website, use your own dataset or use an preloaded example in Kitware Glance.
+1. **Download a dataset** from the [open database for scientific visualisation](https://data.4tu.nl/info/about-your-data/scientific-visualisation), use your own dataset or use a preloaded example in Kitware Glance.
 2. **Load it into the Kitware Glance application** below.
 3. On the left-hand menu, you can adjust the representation of the dataset, experiment with different visualization options, and explore the available tools.
 
