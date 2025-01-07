@@ -2,14 +2,13 @@
 
 In this exercise, we are going to make a visualisation that displays both mechanics and flow simulations. On one side, visualisation of a vertical compression of a 2m-long block which is solved with linear elasticity and ideal plasticity. On the other, visualisation of streamlines generated from a 2D simulation of Stokes flow-through on the front face of the block. The [data](https://data.4tu.nl/ndownloader/items/6e22cba3-f963-4424-bfd0-d1c06f1002d6/versions/1) can be downloaded here.
 
-<figure id="fig-indenter-image" style="text-align: center; margin: auto;">
-  <img src="https://data.4tu.nl/thumbnails/e4fb265b-f05b-4a8e-b2c0-afde16240d45.png"
-       alt="Streamtracer"
-       style="width: 300px;">
-  <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    <strong>Figure 1:</strong> The project from the 4TU-database, exposed at the sixth floor of the CEG building, which we are going to reproduce approximately from the raw simulation data.
-  </figcaption>
-</figure>
+```{figure} https://data.4tu.nl/thumbnails/e4fb265b-f05b-4a8e-b2c0-afde16240d45.png
+---
+width: 300px
+name: fig-4tu-project
+---
+The project from the 4TU-database, exposed at the sixth floor of the CEG building, which we are going to reproduce approximately from the raw simulation data.
+````
 
 ---
 
