@@ -1,21 +1,21 @@
-# Exercise: Von Mises stress visualisation
+# Exercise: Visualisation for mechanics and flow simulation
 
-In this exercise, we are going to make a visualisation that takes both mechanics and flow into consideration. On one side, visualisation of a vertical compression of a 2m-long block is solved with linear elasticity and ideal plasticity. On the other, visualisation of streamlines is generated from a 2D simulation of Stokes flow-through on the top and front face. The [data](https://data.4tu.nl/ndownloader/items/6e22cba3-f963-4424-bfd0-d1c06f1002d6/versions/1) can be downloaded here. 
+In this exercise, we are going to make a visualisation that displays both mechanics and flow simulations. On one side, visualisation of a vertical compression of a 2m-long block which is solved with linear elasticity and ideal plasticity. On the other, visualisation of streamlines generated from a 2D simulation of Stokes flow-through on the front face of the block. The [data](https://data.4tu.nl/ndownloader/items/6e22cba3-f963-4424-bfd0-d1c06f1002d6/versions/1) can be downloaded here.
 
 <figure id="fig-indenter-image" style="text-align: center; margin: auto;">
-  <img src="https://data.4tu.nl/thumbnails/e4fb265b-f05b-4a8e-b2c0-afde16240d45.png" 
-       alt="Streamtracer" 
+  <img src="https://data.4tu.nl/thumbnails/e4fb265b-f05b-4a8e-b2c0-afde16240d45.png"
+       alt="Streamtracer"
        style="width: 300px;">
   <figcaption style="margin-top: 8px; font-size: 14px; color: #555; text-align: center;">
-    <strong>Figure 1:</strong> The project from the 4TU-database, which we are going to imitate from the raw data.
+    <strong>Figure 1:</strong> The project from the 4TU-database, exposed at the sixth floor of the CEG building, which we are going to reproduce approximately from the raw simulation data.
   </figcaption>
 </figure>
 
 ---
 
-### Exercise 1: Visualise the von Mises stress
+### Exercise 1: Visualise the stress distribution
 
-In this first exercise, we are going to focus on the von Mises stress only. This the the mechanical part of the problem. Therefore, we will focus on the `3MD_visual_3Dmech.e` data.
+In this first exercise, we want to visualise the deviatoric stress (von Mises stress) distribution on the deformed block. This is the mechanical part of the problem, simulated in the `3MD_visual_3Dmech.e` data file.
 
 ---
 
@@ -23,10 +23,6 @@ In this first exercise, we are going to focus on the von Mises stress only. This
   <details>
     <summary style="font-size: 16px;"> <strong>Task 1:</strong> Download the data, open it in Paraview, and click on Apply.</summary>
     <div style="margin-left: 20px; margin-top: 10px;">
-      <details>
-        <summary><strong>Hint</strong></summary>
-        <p>No hints available for this task.</p>
-      </details>
       <details>
         <summary><strong>Solution</strong></summary>
         <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-top: 10px;">
@@ -46,7 +42,7 @@ In this first exercise, we are going to focus on the von Mises stress only. This
 
 ---
 
-Note that we can now see the 2m-long block. Let's make the visualisation look better and nicer! 
+Note that we can now see the 2m-long block. Let's make the visualisation look better and nicer!
 
 ---
 
@@ -56,7 +52,7 @@ Note that we can now see the 2m-long block. Let's make the visualisation look be
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
-        <p>The mesh can be shown by changing the representation in the Properties Panel to "Surface with Edges". To rescale the von Mises stress, we can click on "Rescale data to custom range" under Coloring in the Properties Panel and set the values manually.</p>
+        <p>The mesh can be shown by changing the representation in the Properties Panel to "Surface with Edges". To adjust the data range of the von Mises stress, we can click on "Rescale data to custom range" under Coloring in the Properties Panel and set the values manually.</p>
       </details>
       <details>
         <summary><strong>Solution</strong></summary>
@@ -78,7 +74,7 @@ Note that we can now see the 2m-long block. Let's make the visualisation look be
 
 <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
   <details>
-    <summary style="font-size: 16px;"> <strong>Task 3:</strong> Change the color map to a color map you like.</summary>
+    <summary style="font-size: 16px;"> <strong>Task 3:</strong> Pick a desired color map.</summary>
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
@@ -108,7 +104,7 @@ Note that we can now see the 2m-long block. Let's make the visualisation look be
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
-        <p>The color legend can be edited by clicking on "Edit color bar legend" under Coloring in the Properties Panel. You can drag the legend to the right corner with your mouse and in the menu, we can change the font size and color bar thickness to make sure that it fits perfectly. We can change the format of the text by clicking on the toggle advanced properties (little options sign on the right). Set the "label format" to a notation you like to make sure the legend looks nice.</p>
+        <p>The color legend can be edited by clicking on "Edit color bar legend" under Coloring in the Properties Panel. You can drag the legend to the right corner with your mouse and in the menu, you can change the font size and color bar thickness to make sure that it fits perfectly. You can change the format of the text by clicking on the toggle advanced properties (little options sign on the right). Set the "label format" to a notation you like to make sure the legend looks nice.</p>
       </details>
       <details>
         <summary><strong>Solution</strong></summary>
@@ -130,11 +126,11 @@ Note that we can now see the 2m-long block. Let's make the visualisation look be
 
 <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
   <details>
-    <summary style="font-size: 16px" ><strong>Task 5:</strong> Use Warp by Vector to visualise the deformation due to the stress.</summary>
+    <summary style="font-size: 16px" ><strong>Task 5:</strong> Use Warp by Vector to visualise the deformations resulting from the applied stress.</summary>
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
-        <p>No hints available for this task.</p>
+        <p>Warp by Vector can be found in the list of common filters.</p>
       </details>
       <details>
         <summary><strong>Solution</strong></summary>
@@ -158,17 +154,17 @@ Now, we have made a nice visualisation of the mechanical data and the deformatio
 
 ### Exercise 2: Visualise the streamlines and export the animation
 
-In this part of the exercise, we are going to combine the mechanical and flow part. Therefore we are going to work with the `3MD_2D_flow_front.e` data.
+In this part of the exercise, we are going to visualise the flow simulation from the `3MD_2D_flow_front.e` data file.
 
 ---
 
 <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
   <details>
-    <summary style="font-size: 16px" ><strong>Task 1:</strong> Use the calculator to recreate the velocity vector, using the formula: <code>vel_X * iHat + vel_Y *jHat</code></summary>
+    <summary style="font-size: 16px" ><strong>Task 1:</strong> Use the calculator to recreate the vector of fluid velocity.</summary>
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
-        <p>No hints available for this task.</p>
+        <p>Using both components vel_X and vel_Y, the formula to input in the calculator is <code>vel_X * iHat + vel_Y * jHat</code>.</p>
       </details>
       <details>
         <summary><strong>Solution</strong></summary>
@@ -186,11 +182,11 @@ In this part of the exercise, we are going to combine the mechanical and flow pa
   </details>
 </div>
 
---- 
+---
 
 <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
   <details>
-    <summary style="font-size: 16px" ><strong>Task 2:</strong> Use the transform filter to translate the velocity vector along the z-axis by 4.17. </summary>
+    <summary style="font-size: 16px" ><strong>Task 2:</strong> Use the transform filter to translate the dataset along the z-axis by the width of the block (4.17). </summary>
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
@@ -216,11 +212,11 @@ In this part of the exercise, we are going to combine the mechanical and flow pa
 
 <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
   <details>
-    <summary style="font-size: 16px" ><strong>Task 3:</strong> Use the stream tracer filter to show the streamlines. </summary>
+    <summary style="font-size: 16px" ><strong>Task 3:</strong> Use the stream tracer filter to generate the streamlines of flow. </summary>
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
-        <p>Create an upward vector only in the y-direction from <code>0</code> to <code>1.94</code> for the streamtracer below "line parameters" in the Properties Panel. Make sure the streamlines are visible by adjusting the resolution.</p>
+        <p>Create a line seed at the inlet for the stream tracer below "Line Parameters" in the Properties Panel, across the width of the channel from <code>0</code> to <code>1.94</code> in the y-axis . Make sure the streamlines remain individually visible by lowering the Resolution parameter if needed.</p>
       </details>
       <details>
         <summary><strong>Solution</strong></summary>
@@ -246,7 +242,7 @@ In this part of the exercise, we are going to combine the mechanical and flow pa
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
-        <p>Make sure the clip type = box and the length is equal to <code>11.25</code>.</p>
+        <p>Make sure the clip type = box and the length is equal to <code>11.25</code> and the width is non zero.</p>
       </details>
       <details>
         <summary><strong>Solution</strong></summary>
@@ -268,17 +264,17 @@ In this part of the exercise, we are going to combine the mechanical and flow pa
 
 <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px;">
   <details>
-    <summary style="font-size: 16px" ><strong>Task 5:</strong> Make an animation of the visualisation. </summary>
+    <summary style="font-size: 16px" ><strong>Task 5:</strong> Animate the clipping length to let the streamlines appear over the time of the mechanical simulation. </summary>
     <div style="margin-left: 20px; margin-top: 10px;">
       <details>
         <summary><strong>Hint</strong></summary>
-        <p>Under view, select Time Manager. In this menu we can select Clip1 - ClipType - Length(0) (make sure show box in clip is disabled) and making sure we add this by clicking on the plus.</p>
+        <p>Under view, select Time Manager. In this menu we can select Clip1 - ClipType - Length(0) and make sure we add this by clicking on the plus.</p>
       </details>
       <details>
         <summary><strong>Solution</strong></summary>
         <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin-top: 10px;">
           <iframe
-              src="https://www.youtube.com/embed/jzEsFlcEk7w"
+              src="https://www.youtube.com/embed/dBqqv9SIVYE"
               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -292,5 +288,4 @@ In this part of the exercise, we are going to combine the mechanical and flow pa
 
 ---
 
-In this exercise, we created a nice looking visualisation for a multiphysics problem. Try downloading other examples from the [4TU website](https://data.4tu.nl/search?search=scientific_visualisation) to gain more knowledge!
-
+In this exercise, we created a nice looking visualisation for a mechanics and flow problem. Try downloading other examples from the [4TU website](https://data.4tu.nl/search?search=scientific_visualisation) to gain more inspiration!

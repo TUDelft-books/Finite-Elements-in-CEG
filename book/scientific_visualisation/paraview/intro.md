@@ -15,7 +15,7 @@ To download paraview, click [this](https://www.paraview.org/download/) link to g
 
 #### Get started without downloading Paraview (Kitware Glance)
 
-To help you get familiar with ParaView without the need to download the full application, we’ve provided an interactive tool below. Using this tool, you can explore and visualize datasets directly in your browser.
+To help you get familiar with ParaView without the need to download the full application, we have embedded an interactive tool below. Using this tool, you can explore and visualize datasets directly in your browser.
 
 Follow the steps below to interact with the dataset:
 
@@ -26,9 +26,9 @@ Follow the steps below to interact with the dataset:
 Please note that while this version of ParaView is simplified, it gives you a great introduction to its interface and functionality. ParaView has many more advanced tools and features, which you can explore when you use the full application. However, this lightweight version still provides an excellent preview of what ParaView can do!
 
 <div style="text-align: center; margin: 0 auto;">
-<iframe src="https://kitware.github.io/glance/app/" 
-        width="90%" 
-        height="600" 
+<iframe src="https://kitware.github.io/glance/app/"
+        width="90%"
+        height="600"
         style="border: none;">
 </iframe>
 </div>
