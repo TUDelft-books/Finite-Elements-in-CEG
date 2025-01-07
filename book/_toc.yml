@@ -171,6 +171,14 @@ parts:
           title: Exercises
           sections:
           - file: advanced_topics/Exercises/pyjive_fe2
+      - file: scientific_visualisation/intro
+        sections:
+        - file: scientific_visualisation/open_database
+        - file: scientific_visualisation/paraview/intro
+          sections:
+          - file: scientific_visualisation/paraview/paraview
+          - file: scientific_visualisation/paraview/improving_visualisation
+        - file: scientific_visualisation/paraview/exercise_von_mises
 
   - caption: Practical information
     numbered: 0
@@ -192,15 +200,6 @@ parts:
       sections:
       - file: exam_tips/1110
       - file: exam_tips/5110
-      
-    - file: scientific_visualisation/intro
-      sections:
-      - file: scientific_visualisation/open_database
-      - file: scientific_visualisation/paraview/intro
-        sections:
-        - file: scientific_visualisation/paraview/paraview
-        - file: scientific_visualisation/paraview/improving_visualisation
-      - file: scientific_visualisation/paraview/exercise_von_mises
 
 
 # - file: advanced_topics/intro
