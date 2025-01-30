@@ -46,3 +46,43 @@ These are the main methods found in the models:
 Any other methods present in the model are based on the action that the model should be able to perform. All possible actions are defined in the names.py file. 
 
 Since you often need multiple models for your problem - such as one for your material and one for the boundary conditions - the MultiModel class can be used. This model also contains the **take_action** and **configure** methods, but they just combine all the take_actions and configures of the models specified within the MultiModel. Be aware that you still need to specify all the properties of all the models within the MultiModel in your properties file. 
+
+## Highlighting some files from pyJive
+There are a lot of options within pyJive, and there are quite some files. Some you'll need more often than others, so here some of the files are introduced.
+
+````{tab-set}
+```{tab-item} dirimodel.py
+
+Implements Dirichlet boundary conditions. As input it takes on what nodegroups as specified in your properties file, what values are applied on which degrees of freedom. It also reads how much the increment should be for a given timesignal and delta time.
+
+Actions: _get_constraints, _advance_step_constraints
+```
+
+```{tab-item} multimodel.py
+
+In theory, there could just be one big model class which could handle every action from a given module. However, this would be a very cluttered implementation, which would also make it sensitive to errors. This is why the MultiModel class can bundle different models together in such a way that it can communicate every call to action from a module to the right subclass.
+```
+
+```{tab-item} neumannmodel.py
+
+Implements Neumann boundary conditions. Just like DirichletModel, it takes the nodegroups the BCs should work on, on what DOF, with what value and if relevant, how much the load should increase for what time signal and time increment.
+
+Actions: _get_ext_force, _get_unit_force, _advance_step.
+```
+
+```{tab-item} solidmodel.py
+
+If your material is nonlinear and you can’t use elastic, this is where to go. It takes in more properties through simply the property ‘material’, in which the material properties are specified. 
+
+Actions: _get_matrix, _get_mass_matrix, _get_body_force, _commit, _check_commit, _get_stresses, _get_strains, _get_stiffness.
+```
+
+```{tab-item} constrainer.py
+A class that handles the application of constrains to the as-assembled stiffness matrix and force vector, and returns constrained versions of them, ready for solving.
+```
+
+```{tab-item} dofspace.py
+Degree of freedom (dof) management to provide mapping between dof index and node number, and dof type.
+```
+```` 
+
