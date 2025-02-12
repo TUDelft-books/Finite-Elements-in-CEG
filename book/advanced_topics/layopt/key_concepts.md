@@ -1,22 +1,22 @@
 # Key concepts
 
-In this chapter we implement a pyhton script that provides a numerical layout optimization.  
-An easy to use online version is [LayOpt](https://www.layopt.com/truss), which is a bit of a black box for the user. Here we adapt a script provided in the following [paper](https://link.springer.com/article/10.1007/s00158-019-02226-6) $^1$ and explain how the optimization process works. It incorparates an efficient adaptive member adding scheme for 2D and 3D problems subject to multiple load cases.
+In this chapter we share a Python script that provides a numerical layout optimization.  
+An easy to use online version is [LayOpt](https://www.layopt.com/truss), which is a bit of a black box for the user. Here we adapt the script provided in the following [He*et al.*, 2019](https://link.springer.com/article/10.1007/s00158-019-02226-6) $^1$ and explain how the optimization process works. It incorparates an efficient adaptive member adding scheme for 2D and 3D problems subject to multiple load cases.
 
 ## Using the optimization script
 To use the optimization script we need to follow a couple of steps:
 
-**Step 1:** Define the design domain and the load and support conditions, figure(1a). 
+**Step 1:** Define the design domain and the load and support conditions, Figure(1a). 
 
-**Step 2:** Discretize the design domain, figure(1b). We will begin manually defining a set of nodes. Later we will introduce how to define a grid of points over a design space.
+**Step 2:** Discretize the design domain, Figure(1b). We will begin manually defining a set of nodes. Later we will introduce how to define a grid of points over a design space.
 
-**Step 3:** Connect the nodes to create a ground structure, figure(1c). This means we create all possible members between the nodes. We start to do this mannualy and later introduce functions that do this for us.
+**Step 3:** Connect the nodes to create a ground structure, Figure(1c). This means we create all possible members between the nodes. We start to do this mannualy and later introduce functions that do this for us.
 
-**Step 4**: Solve the optimization problem, figure(1d)
+**Step 4**: Solve the optimization problem, Figure(1d)
 
 ![Problem Description](figures/fig1_problemdescription.png)
 
-**Figure 1:** problem description (L. He, M. Gilbert, X. Song, 2019) 
+**Figure 1:** problem description \[He*et al.*, 2019\] 
 
 ## Formulation of the optimization problem
 
@@ -52,7 +52,7 @@ $$
 Where: 
  
 $V$ is the structural volume.  
-$a = [a_{1}, a_{2}, ..., a_{m}]^T$ is a vector containing the cross-sectional areas.  
+$a = [a_{1}, a_{2}, ..., a_{m}]^T$ is a vector containing the cross-section areas.  
 $m$ denotes the number of members.  
 $l = [l_{1}, l_{2}, ..., l_{m}]^T$ is a vector containing the length of the members.  
 $\bold{B}$ is a $2n \times m$ equilibrium matrix.  
@@ -71,7 +71,7 @@ Different problem extensions are already implemented in the script. The problem 
 
 **Joint cost**
 
-The joint cost is a very simple extension. An arbitrary extra cost $s$ is added for every member in the vector containing the member length resulting in the following vector $\bold{l}=[l_{1}s,l_{2}s, ..., l_{m}s ]$. With this joint cost we can steer the result a bit to prevent very complex trusses with a lot of small members. 
+An arbitrary extra cost $s$ is added for every member in the vector containing the member length resulting in the following vector $\bold{l}=[l_{1}s,l_{2}s, ..., l_{m}s ]$. With this joint cost we can steer the result to prevent very complex trusses with many small members. 
 
 **Multiple load cases**
 
@@ -84,9 +84,9 @@ $$
 
 **Adaptive member adding scheme**
 
-The adaptive member adding scheme is used to reduce the computation time. It is possible to initially only use a reduced set of members to solve the problem. Remaining members are added until an additional constraint is satisfied. Watch out that you don't remove too many members from the initial set. If the initial set cannot form a senseble truss to carry the load the code breaks. This happens for example if you don't include any diagonal members.
+The adaptive member adding scheme is used to reduce the computation time. It is possible to initially only use a reduced set of members to solve the problem. Remaining members are added until an additional constraint is satisfied. Watch out that you don't remove too many members from the initial set. If the initial set cannot form a sensible truss to carry the load the algorithm fails. This happens for example if you don't include any diagonal members.
 
-Altough the implementation of the adaptive member adding scheme is quite simple in the examples, the theory is a bit more complicated. In the main function of the ``trussopt.py`` the ``stopViolation`` function checks if the summed maximum virtual strain $\epsilon_{i}$ of member $i$ is smaller than 1. The potential member that most violates this constraint is added to the member set. This member adding process continues untill no more violations are detected. The derivation of this constraint can be found in the paper $^1$ and results in:
+To implementat the adaptive member adding scheme, the main function of the ``trussopt.py`` the ``stopViolation`` function checks if the summed maximum virtual strain $\epsilon_{i}$ of member $i$ is smaller than 1. The potential member that most violates this constraint is added to the member set. This member adding process continues untill no more violations are detected. The derivation of this constraint can be found in the paper $^1$ and results in:
 
 $$
 \epsilon_{i} = \sum_{k=1}^{P} \frac{max (\sigma^+\bold{B}^T_{i}\bold{u}^k_{i})}{l_{i}} \le 1,\\
@@ -103,4 +103,4 @@ The main function in ``trussopt.py`` already requires you to enter the geometry 
 ## References
 
 
-(1) L. He, M. Gilbert, X. Song, "A Python script for adaptive layout optimization of trusses", Struct. Multidisc. Optim., 2019.
+[1] L. He, M. Gilbert, X. Song, "A Python script for adaptive layout optimization of trusses", Struct. Multidisc. Optim., 2019.
