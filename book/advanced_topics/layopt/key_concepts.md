@@ -1,7 +1,7 @@
 # Key concepts
 
 In this chapter we share a Python script that provides a numerical layout optimization.  
-An easy to use online version is [LayOpt](https://www.layopt.com/truss), which is a bit of a black box for the user. Here we adapt the script provided in the following [He*et al.*, 2019](https://link.springer.com/article/10.1007/s00158-019-02226-6) $^1$ and explain how the optimization process works. It incorparates an efficient adaptive member adding scheme for 2D and 3D problems subject to multiple load cases.
+An easy to use online version is [LayOpt](https://www.layopt.com/truss), which is a bit of a black box for the user. Here we adapt the script provided in the following [He *et al.*, 2019](https://link.springer.com/article/10.1007/s00158-019-02226-6) $^1$ and explain how the optimization process works. It incorparates an efficient adaptive member adding scheme for 2D and 3D problems subject to multiple load cases.
 
 ## Using the optimization script
 To use the optimization script we need to follow a couple of steps:
@@ -16,7 +16,7 @@ To use the optimization script we need to follow a couple of steps:
 
 ![Problem Description](figures/fig1_problemdescription.png)
 
-**Figure 1:** problem description \[He*et al.*, 2019\] 
+**Figure 1:** problem description \[He *et al.*, 2019\] 
 
 ## Formulation of the optimization problem
 
