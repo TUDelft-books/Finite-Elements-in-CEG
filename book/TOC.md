@@ -90,6 +90,7 @@
 ### 6.2. Surface-coupled multiphysics problems
 ### 6.3. Multiphysics 
 ### 6.3. Multiscale methods
+### 6.4. Layout optimization
 
 ## 7. Codes
 ### 7.1 Pyjive
