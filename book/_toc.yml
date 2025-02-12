@@ -171,6 +171,9 @@ parts:
           title: Exercises
           sections:
           - file: advanced_topics/Exercises/pyjive_fe2
+      - file: advanced_topics/layopt/intro
+        sections:
+        - file: advanced_topics/layopt/key_concepts    
 
   - caption: Practical information
     numbered: 0
