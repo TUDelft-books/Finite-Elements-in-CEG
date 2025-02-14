@@ -171,6 +171,14 @@ parts:
           title: Exercises
           sections:
           - file: advanced_topics/Exercises/pyjive_fe2
+      - file: scientific_visualisation/intro
+        sections:
+        - file: scientific_visualisation/open_database
+        - file: scientific_visualisation/paraview/intro
+          sections:
+          - file: scientific_visualisation/paraview/paraview
+          - file: scientific_visualisation/paraview/improving_visualisation
+        - file: scientific_visualisation/paraview/exercise_von_mises
 
   - caption: Practical information
     numbered: 0
@@ -185,11 +193,13 @@ parts:
     - file: codes/intro
       sections:
       - file: codes/Gridap
+      - file: codes/Moose
       - file: codes/Pyjive
         title: PyJive
         sections:
         - file: codes/Pyjive-structure
         - file: codes/Pyjive_implementation
+
 
     - file: exam_tips/intro
       sections:
