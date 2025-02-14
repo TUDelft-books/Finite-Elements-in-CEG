@@ -186,6 +186,10 @@ parts:
       sections:
       - file: codes/Gridap
       - file: codes/Pyjive
+        title: PyJive
+        sections:
+        - file: codes/Pyjive-structure
+        - file: codes/Pyjive_implementation
 
     - file: exam_tips/intro
       sections:
