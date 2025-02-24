@@ -103,13 +103,7 @@ $$(sn-sa-fnewguess)
 
 with the idea being that if $\widetilde{f}(x)$ is a fair approximation of $f(x)$, we start from a good initial guess, and repeat this operation enough times we can get arbitrarily close to the actual root. 
 
-```{figure} ./figures/nrconvergence.gif
----
-width: 70ex
-name: Convergence of the Newton-Raphson method
----
-Iterations in the Newton-Raphson method for an equilibrium problem
-```
+
 
 ## Newton-Raphson for FEM
 
@@ -139,7 +133,15 @@ with which we can repeat this process until $\mbf{r}$ is close enough to zero.
 Just as for linear problems, the value of $\ba\new$ above is not actually computed by inverting $\bK$. We instead solve the linearized system of equations $\bK\ba=\mbf{r}\old$. Refer back to the discussion in {doc}`../preliminaries/linear_algebra` for more details on how this is done.
 ```
 
-The Newton-Raphson method is numerical in nature and therefore needs a stopping criterium (i.e. the residual can get arbitrarily close to zero but never exactly zero). It is usual to look at the norm $|\mbf{r}|$, or a scaled version of it. It is also possible to look at $|\Delta\ba|$ of subsequent iterations and stop when $\ba$ is not changing significantly. Metrics involving both $\mbf{r}$ and $\Delta\ba$ can also be used.
+The Newton-Raphson method is numerical in nature and therefore needs a stopping criterium (i.e. the residual can get arbitrarily close to zero but never exactly zero). It is usual to look at the norm $|\mbf{r}|$, or a scaled version of it. It is also possible to look at $|\Delta\ba|$ of subsequent iterations and stop when $\ba$ is not changing significantly. Metrics involving both $\mbf{r}$ and $\Delta\ba$ can also be used. The following animation illustrates the complete procedure:
+
+```{figure} ./figures/nrconvergence.gif
+---
+width: 70ex
+name: Convergence of the Newton-Raphson method
+---
+Iterations in the Newton-Raphson method for an equilibrium problem
+```
 
 Finally, it is worth noting that the efficiency of the method relies on a good initial guess for $\ba$. The further away we are to the actual equilibrium point the lower the quality of the linear approximation of Eq. {eq}`sn-sa-rlinearization`. This is one of the reasons why we are interested in gradually tracing the equilibrium path instead of jumping straight to the final value of $\bff_\mrm{ext}$ or to a final displacement of interest.
 
@@ -179,7 +181,7 @@ name: snapthrough
 Tracing an equilibrium path with non-monotonic loading using load control
 ```
 
-For equilibrium paths containing *softening* behavior, load control might lead to divergence (left) or to large jumps in solution (right) made difficult by a poor initial guess for $\ba$. Even if equilibrium is found, part of the path is effectively lost.
+For equilibrium paths containing *softening* behavior, load control might lead to divergence (left) or to large jumps in solution (right) made difficult by a poor initial guess for $\ba$. Even if equilibrium is found, part of the path becomes effectively inaccessible.
 
 An alternative to overcome this difficulty is to employ Dirichlet constraints and switch to a **displacement control** approach, the main steps of which are shown below:
 
