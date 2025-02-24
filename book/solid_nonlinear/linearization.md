@@ -99,7 +99,7 @@ $$
 \delta\ba\T\underbrace{\displaystyle\int_\Omega \bB\T\bsig\dOmega}_{\bff_\mrm{int}} = \delta\ba\T\underbrace{\left( \displaystyle\int_\Omega \bN\T\bb\dOmega +\displaystyle\int_{\Gamma_N}\bN\T\bt\dGamma \right)}_{\bff_\mrm{ext}}
 $$(sn-l-discreteform1)
 
-We see terms being multiplied by displacements in both sides of the equation above. From the definition of work, these terms must represent **forces**, one representing **internal** forces and the other **external** forces. After elimination of $\delta\ba$ we therefore have the following system of equations:
+We see terms being multiplied by displacements on both sides of the equation above. From the definition of work, these terms must represent **forces**, one representing **internal** forces and the other **external** forces. After elimination of $\delta\ba$ we therefore have the following system of equations:
 
 $$
 \bff_\mrm{int}\left(\ba\right) = \bff_\mrm{ext}
@@ -146,7 +146,7 @@ $$
 \hpder{\bff_\mrm{int}}{\ba} = \displaystyle\int_\Omega \pder{\bB\T}{\ba}\bsig\dOmega + \int_\Omega\bB\T\pder{\bsig}{\beps}\bB \dOmega
 $$(sn-l-linearization3)
 
-which is a general expression for a **tangent stiffness** following from consistent linearization. This expression already hints at which terms can give rise to nonlinearities, but it to make that clear we start at linear elasticity again and make our way back.
+which is a general expression for a **tangent stiffness** following from consistent linearization. This expression already hints at which terms can give rise to nonlinearities, but to make that clear we start at linear elasticity again and work our way back.
 
 ## Sources of nonlinearity
 
@@ -158,7 +158,7 @@ $$
 \bK = \int_\Omega\bB\T\bD\bB \dOmega
 $$(sn-l-linearelasticity)
 
-Starting from linearity and working back to the general expression of Eq. {eq}`sn-l-linearization3`, we can therefore identify **two sources** of nonlinearity, namely:
+We see that to get back to linearity we had to assume that both $\bB$ and $\bD$ were constant. Relaxing each of these assumptions in turn can therefore lead to **two distinct sources** of nonlinearity:
 
 ```{card}
 **Geometric nonlinearity**
