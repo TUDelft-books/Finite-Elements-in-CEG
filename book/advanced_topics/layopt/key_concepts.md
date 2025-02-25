@@ -55,13 +55,13 @@ $V$ is the structural volume.
 $a = [a_{1}, a_{2}, ..., a_{m}]^T$ is a vector containing the cross-section areas.  
 $m$ denotes the number of members.  
 $l = [l_{1}, l_{2}, ..., l_{m}]^T$ is a vector containing the length of the members.  
-$\bold{B}$ is a $2n \times m$ equilibrium matrix.  
+$\boldsymbol{B}$ is a $2n \times m$ equilibrium matrix.  
 $n$ denotes the number of nodes.  
-$\bold{q}$ is a vector containing the internal member forces.  
-$\bold{f}$ is a vector containing the external forces.  
+$\boldsymbol{q}$ is a vector containing the internal member forces.  
+$\boldsymbol{f}$ is a vector containing the external forces.  
 $\sigma^-$ and $\sigma^+$ are the limiting tensile and compressive stresses, respectively.
 
-The equilibrium matrix $\bold{B}$ is assembled using $\bold{B}_{i}$ matrices for every member $i$ interconnecting nodes $I$ and $II$.
+The equilibrium matrix $\boldsymbol{B}$ is assembled using $\boldsymbol{B}_{i}$ matrices for every member $i$ interconnecting nodes $I$ and $II$.
 $B_{i}=[\frac{-X_{i}}{l{i}}, \frac{-Y_{i}}{l{i}}, \frac{X_{i}}{l{i}}, \frac{Y_{i}}{l{i}}]$, where $X_{i}=x_{i}^{II}-x_{i}^{I}$ and $Y_{i}=y_{i}^{II}-y_{i}^{I}$ the projected length $l_{i}$ in the $x$ and $y$ axis directions respectively. 
 
 
@@ -79,7 +79,7 @@ The problem can be extended to include multiple load cases. The equilibrium cons
 
 
 $$
-\bold{B} \bold{q}^k = \bold{f}^k, \text{ for } k=1, 2, ..., p
+\boldsymbol{B} \boldsymbol{q}^k = \boldsymbol{f}^k, \text{ for } k=1, 2, ..., p
 $$
 
 **Adaptive member adding scheme**
@@ -89,7 +89,7 @@ The adaptive member adding scheme is used to reduce the computation time. It is 
 To implementat the adaptive member adding scheme, the main function of the ``trussopt.py`` the ``stopViolation`` function checks if the summed maximum virtual strain $\epsilon_{i}$ of member $i$ is smaller than 1. The potential member that most violates this constraint is added to the member set. This member adding process continues untill no more violations are detected. The derivation of this constraint can be found in the paper $^1$ and results in:
 
 $$
-\epsilon_{i} = \sum_{k=1}^{P} \frac{max (\sigma^+\bold{B}^T_{i}\bold{u}^k_{i})}{l_{i}} \le 1,\\
+\epsilon_{i} = \sum_{k=1}^{P} \frac{max (\sigma^+\boldsymbol{B}^T_{i}\boldsymbol{u}^k_{i})}{l_{i}} \le 1,\\
 $$
 $$
 (\text{for}\ i = 1, ..., m)
