@@ -173,7 +173,8 @@ parts:
           - file: advanced_topics/Exercises/pyjive_fe2
       - file: advanced_topics/layopt/intro
         sections:
-        - file: advanced_topics/layopt/key_concepts    
+        - file: advanced_topics/layopt/key_concepts
+        - file: advanced_topics/layopt/examples   
 
   - caption: Practical information
     numbered: 0
