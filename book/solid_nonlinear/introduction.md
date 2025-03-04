@@ -89,7 +89,7 @@ The presence of nonlinearities brings substantial changes to the way we approach
 ```{admonition} What about models with more than one DOF?
 :class: dropdown
 
-Load-displacement behavior is usually represented by plotting a single load versus a single displacement. In 1-DOF systems this is all there is to plot, but we also do it for more complex models sometimes comprising millions of DOFs and load shapes. 
+Load-displacement behavior is usually represented by plotting a single load versus a single displacement. In 1-DOF systems this is all there is to plot, but we also do it for more complex models sometimes comprising millions of DOFs and featuring complicated load shapes. 
 
 There are different ways to still make a 1D representation possible in those cases, but they usually involve taking the average displacement in some region of the model and either summing up all external loads at the same nodes or assuming all loads in the model increase proportionally and plotting a *load factor* instead.
 ```
