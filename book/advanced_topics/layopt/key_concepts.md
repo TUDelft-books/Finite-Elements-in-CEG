@@ -71,7 +71,7 @@ Different problem extensions are already implemented in the script. The problem 
 
 **Joint cost**
 
-An arbitrary extra cost $s$ is added for every member in the vector containing the member length resulting in the following vector $\bold{l}=[l_{1}s,l_{2}s, ..., l_{m}s ]$. With this joint cost we can steer the result to prevent very complex trusses with many small members. 
+An arbitrary extra cost $s$ is added for every member in the vector containing the member length resulting in the following vector $\boldsymbol{l}=[l_{1}s,l_{2}s, ..., l_{m}s ]$. With this joint cost we can steer the result to prevent very complex trusses with many small members. 
 
 **Multiple load cases**
 
