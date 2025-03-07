@@ -62,7 +62,6 @@ parts:
       sections:
       - file: structural_linear/euler_bernouilli
       - file: structural_linear/timoshenko_md
-      - file: structural_linear/timoshenko
       - file: structural_linear/space_frame
       - file: structural_linear/Tutorials/tutorials
         title: Tutorials
