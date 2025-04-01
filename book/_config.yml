@@ -19,7 +19,7 @@ launch_buttons:
 
 sphinx:
   extra_extensions:
-    - sphinx_multitoc_numbering
+    # - sphinx_multitoc_numbering
     - jupyterbook_patches
   config:
     html_js_files:
