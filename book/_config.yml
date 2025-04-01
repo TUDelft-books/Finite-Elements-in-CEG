@@ -5,11 +5,11 @@ logo: images/TUDelft_logo_rgb.png
 
 # Execute notebooks when building
 execute:
-  execute_notebooks: auto
-  exclude_patterns:
-    - 'Exercises/*.ipynb'
-    - 'Tutorials/*.ipynb'
-    - 'pyjive_workshops/*ipynb'
+  execute_notebooks: false
+  # exclude_patterns:
+  #   - 'Exercises/*.ipynb'
+  #   - 'Tutorials/*.ipynb'
+  #   - 'pyjive_workshops/*ipynb'
 
 html:
   use_multitoc_numbering: true
