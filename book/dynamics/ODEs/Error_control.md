@@ -4,7 +4,7 @@ In the previous section we have seen that the error of the approximation is gove
 
 Generally speaking, for an approximation to be accurate it needs to resolve all the scales of the system. A system that results in a solution with small time scales (high frequency), like the blue curve in the figure below, requires smaller time steps than a system with large scales (low frequency), red curve.
 
-```{figure} ./Figures/large-small-freq.png
+```{figure} ./Figures/Large-small-freq.png
 ---
 height: 600px
 name: 1_4_1
@@ -40,7 +40,7 @@ Ignoring the higher order terms and solving for $\Delta t$ gives:
 
 $$ \Delta t_n\leq\min\left(\sqrt{2\frac{\tau}{\left|\ddot{u}_n\right|}},\sqrt{2\frac{\tau}{\left|\dddot{u}_n\right|}}\right). $$
 
-In the case of study of this chapter, we can define $\ddot{u}_n$$ using the equation of motion: $m\ddot{u}(t)+c\dot{u}(t)+ku(t)=F(t)$. However, we do not have the value of $\dddot{u}_n$. In that case, we can approximate it as
+In the case of study of this chapter, we can define $\ddot{u}_n$ using the equation of motion: $m\ddot{u}(t)+c\dot{u}(t)+ku(t)=F(t)$. However, we do not have the value of $\dddot{u}_n$. In that case, we can approximate it as
 
 $$ \dddot{u}_n\approx\frac{\ddot{u}_n-\ddot{u}_{n-1}}{\Delta t_{n-1}}. $$
 

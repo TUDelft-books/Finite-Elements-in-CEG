@@ -122,11 +122,11 @@ parts:
           title: ODE Solvers Workshops
           sections:
           - file: dynamics/Exercises/ode_solvers_workshops/Workshop_ODE_Solvers
+          - file: dynamics/Exercises/ode_solvers_workshops/Workshop_ODE_convergence
           - file: dynamics/Exercises/ode_solvers_workshops/Workshop_Linearizing_EOM
           - file: dynamics/Exercises/ode_solvers_workshops/Workshop_EOM_Pendulum
           - file: dynamics/Exercises/ode_solvers_workshops/Workshop_EOM_2DOF
           - file: dynamics/Exercises/ode_solvers_workshops/Workshop_EOM_4DOF
-          - file: dynamics/Exercises/ode_solvers_workshops/Workshop_FEM_dyn_rod
         - file: dynamics/Exercises/str_elem_dyn_workshops/str_elem_dyn_workshops
           title: Structural Elements Dynamics Workshops
           sections:
