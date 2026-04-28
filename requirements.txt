@@ -3,6 +3,7 @@ teachbooks # depends on jupyter-book
 jupyter-book
 numpy
 scipy
+sympy
 matplotlib
 pandas
 pylance
