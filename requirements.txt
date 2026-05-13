@@ -9,6 +9,8 @@ pandas
 pylance
 ipympl
 plotly
+gmsh
+meshio
 
 # docutils version for reference page formatting
 docutils==0.17.1
